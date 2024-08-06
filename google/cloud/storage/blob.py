@@ -448,9 +448,7 @@ class Blob(_PropertyMixin):
         :rtype: :class:`google.cloud.storage.blob.Blob`
         :returns: The blob object created.
         """
-        warnings.warn(
-            _FROM_STRING_DEPRECATED, PendingDeprecationWarning, stacklevel=2
-        )
+        warnings.warn(_FROM_STRING_DEPRECATED, PendingDeprecationWarning, stacklevel=2)
         return Blob.from_uri(uri=uri, client=client)
 
     def generate_signed_url(
